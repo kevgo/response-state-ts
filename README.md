@@ -25,3 +25,6 @@ Cons:
 - in 99% of the success cases there is only one useful type of result
 - in 95% of the error cases there isn't much we can do except bubble up, print
   an error message, and die
+
+As a general solution this seems too cumbersome and invasive for too little
+benefit, but could be useful in edge cases.
