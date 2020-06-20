@@ -1,7 +1,7 @@
 # Response State pattern in TypeScript
 
 This repo demonstrates using
-[Discriminating union types](https://www.typescriptlang.org/v2/docs/handbook/unions-and-intersections.html#discriminating-unions)
+[Discriminating Union Types](https://www.typescriptlang.org/v2/docs/handbook/unions-and-intersections.html#discriminating-unions)
 in TypeScript to implement the Response-State pattern with typesystem support in
 TypeScript.
 
@@ -13,13 +13,15 @@ errors.
 Pros:
 
 - typechecking support
-- forces checking of options before being able to use results
+- forces checking of options before using results
 
 Cons:
 
-- boilerplate to define the types for the various responses
-- in 95% of the cases, there isn't much we can do in an error case except bubble
-  up, print error message, and die
+- defining the types for the various responses requires substantial amounts of
+  boilerplate
 - does not enforce checking all options
 - not idiomatic: other code doesn't work this way, have to convert back and
   forth when calling external code
+- in 99% of the success cases there is only one useful type of result
+- in 95% of the error cases there isn't much we can do except bubble up, print
+  an error message, and die
