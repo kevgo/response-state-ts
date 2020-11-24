@@ -1,14 +1,14 @@
 export {} // needed to enforce package isolation
 
-type ReadFileSuccess = {
+type ReadFileResult_Success = {
   state: "success"
   content: string
 }
-type UserError = {
+type ReadFileResult_UserError = {
   state: "error"
   message: string
 }
-type ReadFileResult = ReadFileSuccess | UserError
+type ReadFileResult = ReadFileResult_Success | ReadFileResult_UserError
 
 function readFile(name: string): ReadFileResult {
   return {
